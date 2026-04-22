@@ -31,3 +31,6 @@ Route::get('/listbarang/{id}/{nama}', function($id, $nama){
 Route::get('/hana', function () {
     return view('hana');
 });
+
+use App\Http\Controllers\ProductController;
+Route::get('/list-product', [ProductController::class, 'index']);
